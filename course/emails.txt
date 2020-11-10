@@ -1,0 +1,296 @@
+20100618 Alan Barrett, this is not used by the code, it is in git to be able to be retrieved
+if e-mail text gets overwritten/lost from the Moodle settings where it is now to be stored.
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+Your application to take the Course Module 
+'COURSE_MODULE_1_NAME_HERE'
+COURSE_MODULE_2_TEXT_HEREhas been approved.
+COURSE_MODULE_2_WARNING_TEXT_HERE
+
+You will receive a welcome email for each course module giving
+the course module URL and the URL for your profile.
+We will send you all these details on the first day of the course
+orientation week September 17th 2012.
+
+Please see the course timetable at:
+http://www.peoples-uni.org/book/course-dates
+
+*** Payment will be required unless you have been approved for a bursary.
+If you can do this before enrolment on 17th of September, it would be
+preferable, otherwise since time is tight you can do this once the
+semester has started.
+
+Your fees are £AMOUNT_TO_PAY_HERE sterling for this semester.
+
+There are a number of ways you can pay.
+
+WITH A CREDIT CARD... You can pay via the secure online
+payment system RBS WorldPay. Please click on the following URL:
+http://courses.peoples-uni.org/course/pay.php?sid=SID_HERE
+
+and follow instructions (Everything happens automatically,
+there is no need to tell us about your payment).
+
+BY BANK TRANSFER (UK or Nigeria)...
+
+DIRECT TO THE UK in Pounds Sterling
+BANK NAME: Barclays
+Branch: Barclays Bank, Manchester City, PO Box 357, 51 Mosley Street,
+Manchester UK.
+Account name: Peoples Open Access Education Initiative
+Account number: 93777308
+Sort code: 20-55-34
+SWIFT: BARCGB22
+IBAN: GB82 BARC 2055 3493 7773 08
+Please be sure to quote this number SID_HERE as a reference in
+addition to giving your name on the lodgement docket.
+When you have made the Bank Transfer you must then click on this
+web site (URL):
+http://courses.peoples-uni.org/course/paydetails.php?sid=SID_HERE
+
+and fill in the form so we know about your payment.
+
+IN NIGERIA in local currency, Naira
+Please pay N9,000 for one course module or N18,000 for two into:
+BANK NAME: Ecobank Nigeria PLC.
+Branch: Wuse II, Abuja
+Account name: Datasphir Solutions Limited
+Account number: 0122270018
+Please be sure to quote this number SID_HERE as a reference in
+addition to giving your name on the lodgement docket.
+When you have made the Bank Transfer you must then click on this web site (URL):
+http://courses.peoples-uni.org/course/paydetails.php?sid=SID_HERE
+
+and fill in the form so we know about your payment.
+
+Note for others in Africa: Anyone from the country list at
+http://ecobank.com/yourcountry.aspx
+can pay in their local currency.  Go to your local Ecobank branch and
+ask to pay the cost of their module/s in Naira to the Peoples-uni
+account in Nigeria.
+The banks internal processes takes care of the exchange.
+
+AN ALTERNATIVE WAY, you can use MoneyGram to send money
+directly.
+Please give the receiver's name as:
+Professor Rajan Madhok,
+People's Open Access Education Initiative,
+Manchester UK.
+
+If you do use this method, please let us know through
+payments@peoples-uni.org and send us the payment reference
+number, your first and middle name, and surname or family name.
+These should be of the sender, if not sent by you.
+
+You can look at your payment account balance and all transactions
+at any time when logged in at this URL:
+http://courses.peoples-uni.org/course/account.php
+
+NOTE_ON_INSTALMENTS_HERE
+
+We look forward to your participation this semester, and hope that
+you enjoy the experience and find it useful.
+
+    Peoples Open Access Education Initiative Administrator.
+====================================================================================
+Set the above text as the Approval e-mail wording (in Application Details/app.php)
+====================================================================================
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+We contacted you earlier indicating that your application for this 
+semester had been approved and giving payment options.
+
+We have so far not received any indication of payment from you.
+If you have only recently paid we may not have a record of that yet.
+However, if you have not paid, we would like to remind you and ask
+you to process the payment - please send a message to 
+payments@peoples-uni.org and tell us if there is a problem.
+
+Your fees are £AMOUNT_TO_PAY_HERE sterling for this semester.
+
+Here is a reminder of the payment methods.
+
+WITH A CREDIT CARD... You can pay via the secure online
+payment system RBS WorldPay. Please click on the following URL:
+http://courses.peoples-uni.org/course/pay.php?sid=SID_HERE
+
+and follow instructions (Everything happens automatically,
+there is no need to tell us about your payment).
+
+BY BANK TRANSFER (UK or Nigeria)...
+
+DIRECT TO THE UK in Pounds Sterling
+BANK NAME: Barclays
+Branch: Barclays Bank, Manchester City, PO Box 357, 51 Mosley Street,
+Manchester UK.
+Account name: Peoples Open Access Education Initiative
+Account number: 93777308
+Sort code: 20-55-34
+SWIFT: BARCGB22
+IBAN: GB82 BARC 2055 3493 7773 08
+Please be sure to quote this number SID_HERE as a reference in
+addition to giving your name on the lodgement docket.
+When you have made the Bank Transfer you must then click on this 
+web site (URL):
+http://courses.peoples-uni.org/course/paydetails.php?sid=SID_HERE
+
+and fill in the form so we know about your payment.
+
+IN NIGERIA in local currency, Naira
+Please pay N9,000 for one course module or N18,000 for two into:
+BANK NAME: Ecobank Nigeria PLC.
+Branch: Wuse II, Abuja
+Account name: Datasphir Solutions Limited
+Account number: 0122270018
+Please be sure to quote this number SID_HERE as a reference in
+addition to giving your name on the lodgement docket.
+When you have made the Bank Transfer you must then click on this
+web site (URL):
+http://courses.peoples-uni.org/course/paydetails.php?sid=SID_HERE
+
+and fill in the form so we know about your payment.
+Note for others in Africa: Anyone from the country list at
+http://ecobank.com/yourcountry.aspx
+can pay in their local currency.  Go to your local Ecobank branch and
+ask to pay the cost of their module/s in Naira to the Peoples-uni
+account in Nigeria.
+The banks internal processes takes care of the exchange.
+
+AN ALTERNATIVE WAY, you can use MoneyGram to send money 
+directly. 
+Please give the receiver's name as: 
+Professor Rajan Madhok, 
+People's Open Access Education Initiative, 
+Manchester UK. 
+
+If you do use this method, please let us know through
+payments@peoples-uni.org and send us the payment reference
+number, your first and middle name, and surname or family name. 
+These should be of the sender, if not sent by you. 
+
+We hope that you are enjoying the course this semester.
+
+    Peoples Open Access Education Initiative Administrator.
+====================================================================================
+Set above text as Batch Reminder e-mail wording (in applications.php spreadsheet)
+====================================================================================
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+Here is a reminder of you Application ID (called SID).
+
+Your SID is: SID_HERE
+
+This is used both for payment purposes and also to present anonymous data to you.
+
+    Peoples Open Access Education Initiative Administrator.
+====================================================================================
+Set above text as wording for Batch e-mail to enrolled students (in coursegrades.php)
+====================================================================================
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+Thank you for sending an expression of interest to enrol on the next intake
+in the Peoples-uni. The next intake will be in September 2010,
+and we will contact you beforehand when we are open for enrolments.
+In the meantime, you may want to look through the course module Foundations
+of Public Health at http://courses.peoples-uni.org/course/view.php?id=53
+which is freely available as an demonstration course module to show you
+what a module looks like and to set the scene for you.
+You may also want to look in detail through the particular parts of the
+web site http://peoples-uni.org under the section 'Potential Students'.
+You can also ask any question in the section marked 'Ask a Question'
+under the 'Community' heading, and view the Frequently Asked Questions
+(FAQ) on the top right hand corner of the site.
+
+We look forward to seeing you on the course soon.
+
+     Peoples Open Access Education Initiative Administrator.
+====================================================================================
+Set above text as Reply e-mail wording for Expressions of Interest (in int.php)
+====================================================================================
+
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+This is a reminder that you have not logged on to Peoples-uni
+since the start of the Semester.
+
+You can login at http://courses.peoples-uni.org/login/index.php
+
+     Peoples Open Access Education Initiative Administrator.
+====================================================================================
+Set above text as wording for Batch e-mail to Not Loggen on students (in coursegrades.php)
+====================================================================================
+
+
+====================================================================================
+Dear GIVEN_NAME_HERE,
+
+This is to provide feedback to you about your contributions to the
+discussion forums in each of the Topics in the module.
+As you will know from the section in the Student Handbook
+http://peoples-uni.org/content/discussion-contributions
+contributions to the discussion forums should “show reflection
+and critical thought, and understanding of relevant literature.
+You should include reference to your own experience,
+to the resources in the module, and give a reference to a
+published paper or web site”. This is not only to help with your
+learning, but also “help prepare for the assignment –
+the unit assignment requires you to answer questions relating to the
+information presented as relevant to the learning objectives,
+as well as to take a critical approach to the information and to
+support your answer with references”.
+*Please note: as in the assignments, it is important that you
+acknowledge any items you use in the discussions which are taken
+from the work of others. If you copy and paste from another source,
+you must acknowledge the source and reference it*.
+*It is always better to use your own words anyway!*
+
+I have had a look at your discussion contributions, and here are my
+comments on whether you meet the following Criteria...
+
+DISCUSSION_CRITERIA_HERE
+
+There are some helpful resources on how to carry out referencing in
+the Student Handbook and also in the Student Corner - such as the
+tutorial from Monash University:
+http://www.lib.monash.edu.au/tutorials/citing/index.html
+We usually recommend using the Harvard system of referencing, and 
+here is the link to a tutorial on this from Nottingham University -
+Referencing your work with Harvard:
+http://equella.nottingham.ac.uk/uon/items/9ba73656-1729-2453-d9eb-6fd932a12753/1/ViewIMS.jsp
+(Note you might have to refresh that page to get it to display properly)
+However, the Vancouver style is also frequently used in the medical
+scientific literature. There is information on critical thinking in
+the Student Corner "How can I develop my Critical Thinking skills?":
+http://courses.peoples-uni.org/mod/page/view.php?id=6919&inpopup=1
+
+We will be sending information on the number of posts you have made 
+to the discussions in comparison with others on your module at a
+later stage.
+
+The discussion forums do remain open, even after the end of the time
+period for each Topic, so you can post something to them late if you
+have been away.
+
+Please note that contributions to the Student Corner do not count
+for credit – the Student Corner is for discussions amongst the
+students on common problems and interests (there have been some 
+very interesting issues discussed so far so please keep this up if you 
+find it useful, but do not forget to keep to the spirit of the
+Peoples-uni in the need for evidence rather than just opinion!).
+
+Best wishes.
+
+    Education Coordinator.
+====================================================================================
+Set above text as wording for the e-mail sent to students when Discussion Feedback form is submitted (in discussionfeedback.php)
+====================================================================================
