@@ -2232,6 +2232,7 @@ function forum_rating_permissions($contextid, $component, $ratingarea) {
  */
 function forum_rating_validate($params) {
     global $DB, $USER;
+    global $CFG;
 
     // Check the component is mod_forum
     if ($params['component'] != 'mod_forum') {
@@ -2261,7 +2262,7 @@ function forum_rating_validate($params) {
         throw new rating_exception('invalidcontext');
     }
 
-    if ($forum->scale != $params['scaleid']) {
+    if (($forum->scale != $params['scaleid']) && ($params['scaleid'] != $CFG->scale_to_use_for_triple_rating_2) && ($params['scaleid'] != $CFG->scale_to_use_for_triple_rating_3) && ($params['scaleid'] != $CFG->scale_to_use_for_triple_rating_4)) {
         //the scale being submitted doesnt match the one in the database
         throw new rating_exception('invalidscaleid');
     }
