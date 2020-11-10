@@ -127,6 +127,8 @@ class posts extends exporter {
                 $ratingbypostid,
                 $output
             ) {
+                global $CFG;
+
                 $authorid = $post->get_author_id();
                 $postid = $post->get_id();
                 $author = isset($authorsbyid[$authorid]) ? $authorsbyid[$authorid] : [];
@@ -135,13 +137,19 @@ class posts extends exporter {
                 $authorgroups = isset($groupsbyauthorid[$authorid]) ? $groupsbyauthorid[$authorid] : [];
                 $tags = isset($tagsbypostid[$postid]) ? $tagsbypostid[$postid] : [];
                 $rating = isset($ratingbypostid[$postid]) ? $ratingbypostid[$postid] : null;
+                $rating2 = isset($ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_2}"]) ? $ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_2}"] : null;
+                $rating3 = isset($ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_3}"]) ? $ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_3}"] : null;
+                $rating4 = isset($ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_4}"]) ? $ratingbypostid["{$postid}scale{$CFG->scale_to_use_for_triple_rating_4}"] : null;
                 $exporter = new post_exporter($post, array_merge($related, [
                     'author' => $author,
                     'authorcontextid' => $authorcontextid,
                     'attachments' => $attachments,
                     'authorgroups' => $authorgroups,
                     'tags' => $tags,
-                    'rating' => $rating
+                    'rating' => $rating,
+                    'rating2' => $rating2,
+                    'rating3' => $rating3,
+                    'rating4' => $rating4
                 ]));
                 return $exporter->export($output);
             },
