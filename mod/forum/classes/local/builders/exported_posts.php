@@ -436,6 +436,9 @@ class exported_posts {
 
             foreach ($items as $item) {
                 $ratingsbypostid[$item->id] = empty($item->rating) ? null : $item->rating;
+                if (!empty($item->rating2) && !empty($item->rating2->settings->scale->id)) $ratingsbypostid["{$item->id}scale{$item->rating2->settings->scale->id}"] = $item->rating2;
+                if (!empty($item->rating3) && !empty($item->rating3->settings->scale->id)) $ratingsbypostid["{$item->id}scale{$item->rating3->settings->scale->id}"] = $item->rating3;
+                if (!empty($item->rating4) && !empty($item->rating4->settings->scale->id)) $ratingsbypostid["{$item->id}scale{$item->rating4->settings->scale->id}"] = $item->rating4;
             }
         }
 
