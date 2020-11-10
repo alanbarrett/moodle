@@ -95,6 +95,7 @@ if ($userrating != RATING_UNSET_RATING) {
     $options->userid = $USER->id;
     $options->itemid = $itemid;
 
+    $options->use_specific_scale = $scaleid; // If this is one of our three special scales, deal with only the current one (don't combine all three)
     $rm->delete_ratings($options);
 }
 
