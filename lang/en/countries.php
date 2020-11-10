@@ -266,6 +266,7 @@ $string['VN'] = 'Viet Nam';
 $string['VU'] = 'Vanuatu';
 $string['WF'] = 'Wallis and Futuna';
 $string['WS'] = 'Samoa';
+$string['XK'] = 'Kosovo';
 $string['YE'] = 'Yemen';
 $string['YT'] = 'Mayotte';
 $string['ZA'] = 'South Africa';
