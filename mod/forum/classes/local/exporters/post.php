@@ -320,6 +320,27 @@ class post extends exporter {
                         'type' => PARAM_RAW,
                         'description' => 'The HTML source to rate the post',
                     ],
+                    'rating2' => [
+                        'optional' => true,
+                        'default' => null,
+                        'null' => NULL_ALLOWED,
+                        'type' => PARAM_RAW,
+                        'description' => 'The HTML source to rate2 the post',
+                    ],
+                    'rating3' => [
+                        'optional' => true,
+                        'default' => null,
+                        'null' => NULL_ALLOWED,
+                        'type' => PARAM_RAW,
+                        'description' => 'The HTML source to rate3 the post',
+                    ],
+                    'rating4' => [
+                        'optional' => true,
+                        'default' => null,
+                        'null' => NULL_ALLOWED,
+                        'type' => PARAM_RAW,
+                        'description' => 'The HTML source to rate4 the post',
+                    ],
                     'taglist' => [
                         'optional' => true,
                         'default' => null,
@@ -346,6 +367,8 @@ class post extends exporter {
      * @return array Keys are the property names, values are their values.
      */
     protected function get_other_values(renderer_base $output) {
+        global $CFG;
+
         $post = $this->post;
         $authorgroups = $this->related['authorgroups'];
         $forum = $this->related['forum'];
@@ -355,12 +378,18 @@ class post extends exporter {
         $user = $this->related['user'];
         $readreceiptcollection = $this->related['readreceiptcollection'];
         $rating = $this->related['rating'];
+        $rating2 = $this->related['rating2'];
+        $rating3 = $this->related['rating3'];
+        $rating4 = $this->related['rating4'];
         $tags = $this->related['tags'];
         $attachments = $this->related['attachments'];
         $includehtml = $this->related['includehtml'];
         $isdeleted = $post->is_deleted();
         $isprivatereply = $post->is_private_reply();
         $hasrating = $rating != null;
+        $hasrating2 = $rating2 != null;
+        $hasrating3 = $rating3 != null;
+        $hasrating4 = $rating4 != null;
         $hastags = !empty($tags);
         $discussionid = $post->get_discussion_id();
         $parentid = $post->get_parent_id();
@@ -471,6 +500,9 @@ class post extends exporter {
             'tags' => ($loadcontent && $hastags) ? $this->export_tags($tags) : [],
             'html' => $includehtml ? [
                 'rating' => ($loadcontent && $hasrating) ? $output->render($rating) : null,
+                'rating2' => ($loadcontent && $hasrating2) ? $output->render($rating2) : null,
+                'rating3' => ($loadcontent && $hasrating3) ? $output->render($rating3) : null,
+                'rating4' => ($loadcontent && $hasrating4) ? $output->render($rating4) . ($rating4->user_can_rate() ? '<div class="post-actions d-flex align-self-end justify-content-end flex-wrap ml-auto"><a href="' . $CFG->wwwroot . '/notes/index.php?user=' . $post->get_author_id() . '" target="_blank" class="btn btn-link">Notes</a></div>' : '') : null,
                 'taglist' => ($loadcontent && $hastags) ? $output->tag_list($tags) : null,
                 'authorsubheading' => ($loadcontent) ? $this->get_author_subheading_html($exportedauthor, $timecreated) : null
             ] : null
@@ -497,6 +529,9 @@ class post extends exporter {
             'attachments' => '\stored_file[]?',
             'tags' => '\core_tag_tag[]?',
             'rating' => 'rating?',
+            'rating2' => 'rating?',
+            'rating3' => 'rating?',
+            'rating4' => 'rating?',
             'includehtml' => 'bool'
         ];
     }
