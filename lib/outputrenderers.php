@@ -2255,6 +2255,13 @@ class core_renderer extends renderer_base {
             return null;//ratings are turned off
         }
 
+        if (!empty($rating->id_attribute_for_html)) { // Deal with requirement to have 3 separate scales for some Peoples-uni discussions (ALAN)
+          $id_attribute_for_html = $rating->id_attribute_for_html;
+        }
+        else {
+          $id_attribute_for_html = $rating->itemid;
+        }
+
         $ratingmanager = new rating_manager();
         // Initialise the JavaScript so ratings can be done by AJAX.
         $ratingmanager->initialise_rating_javascript($this->page);
@@ -2267,15 +2274,16 @@ class core_renderer extends renderer_base {
 
             $aggregatelabel = $ratingmanager->get_aggregate_label($rating->settings->aggregationmethod);
             $aggregatelabel = html_writer::tag('span', $aggregatelabel, array('class'=>'rating-aggregate-label'));
+            if (!empty($rating->id_attribute_for_html)) $aggregatelabel = ''; // For 3 separate scales don't display Aggregate Label
             $aggregatestr   = $rating->get_aggregate_string();
 
-            $aggregatehtml  = html_writer::tag('span', $aggregatestr, array('id' => 'ratingaggregate'.$rating->itemid, 'class' => 'ratingaggregate')).' ';
+            $aggregatehtml  = html_writer::tag('span', $aggregatestr, array('id' => 'ratingaggregate'.$id_attribute_for_html, 'class' => 'ratingaggregate')).' ';
             if ($rating->count > 0) {
                 $countstr = "({$rating->count})";
             } else {
                 $countstr = '-';
             }
-            $aggregatehtml .= html_writer::tag('span', $countstr, array('id'=>"ratingcount{$rating->itemid}", 'class' => 'ratingcount')).' ';
+            $aggregatehtml .= html_writer::tag('span', $countstr, array('id'=>"ratingcount{$id_attribute_for_html}", 'class' => 'ratingcount')).' ';
 
             if ($rating->settings->permissions->viewall && $rating->settings->pluginpermissions->viewall) {
 
@@ -2299,7 +2307,7 @@ class core_renderer extends renderer_base {
 
             //start the rating form
             $formattrs = array(
-                'id'     => "postrating{$rating->itemid}",
+                'id'     => "postrating{$id_attribute_for_html}",
                 'class'  => 'postratingform',
                 'method' => 'post',
                 'action' => $rateurl->out_omit_querystring()
@@ -2319,14 +2327,14 @@ class core_renderer extends renderer_base {
             $ratinghtml = $formstart.$ratinghtml;
 
             $scalearray = array(RATING_UNSET_RATING => $strrate.'...') + $rating->settings->scale->scaleitems;
-            $scaleattrs = array('class'=>'postratingmenu ratinginput','id'=>'menurating'.$rating->itemid);
-            $ratinghtml .= html_writer::label($rating->rating, 'menurating'.$rating->itemid, false, array('class' => 'accesshide'));
+            $scaleattrs = array('class'=>'postratingmenu ratinginput','id'=>'menurating'.$id_attribute_for_html);
+            $ratinghtml .= html_writer::label($rating->rating, 'menurating'.$id_attribute_for_html, false, array('class' => 'accesshide'));
             $ratinghtml .= html_writer::select($scalearray, 'rating', $rating->rating, false, $scaleattrs);
 
             //output submit button
             $ratinghtml .= html_writer::start_tag('span', array('class'=>"ratingsubmit"));
 
-            $attributes = array('type' => 'submit', 'class' => 'postratingmenusubmit', 'id' => 'postratingsubmit'.$rating->itemid, 'value' => s(get_string('rate', 'rating')));
+            $attributes = array('type' => 'submit', 'class' => 'postratingmenusubmit', 'id' => 'postratingsubmit'.$id_attribute_for_html, 'value' => s(get_string('rate', 'rating')));
             $ratinghtml .= html_writer::empty_tag('input', $attributes);
 
             if (!$rating->settings->scale->isnumeric) {
