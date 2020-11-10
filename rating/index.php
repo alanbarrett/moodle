@@ -95,6 +95,7 @@ $ratingoptions->itemid = $itemid;
 $ratingoptions->sort = $sqlsort;
 
 $rm = new rating_manager();
+$ratingoptions->scaleid = $scaleid;
 $ratings = $rm->get_all_ratings_for_item($ratingoptions);
 if (!$ratings) {
     $msg = get_string('noratings', 'rating');
